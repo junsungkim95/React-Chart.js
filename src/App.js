@@ -4,6 +4,7 @@ import { UserData } from "./Data";
 import BarChart from "./components/BarChart";
 import LineChart from "./components/LineChart";
 import PieChart from "./components/PieChart";
+import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
     // 훅으로 차트에 사용할 데이터샛 만들고 프롭으로 넘김
@@ -17,11 +18,11 @@ function App() {
                 label: "Users Gained",
                 data: UserData.map((data) => data.userGain),
                 backgroundColor: [
-                  "rgba(75,192,192,1)",
-                  "#ecf0f1",
-                  "#50AF95",
-                  "#f3ba2f",
-                  "#2a71d0",
+                    "rgba(75,192,192,1)",
+                    "#ecf0f1",
+                    "#50AF95",
+                    "#f3ba2f",
+                    "#2a71d0",
                 ],
                 borderColor: "black",
                 borderWidth: 2,
@@ -32,15 +33,19 @@ function App() {
     return (
         <div className="App">
             {/* 차트 크기는 wrapper로 감싸서 스타일 넣어주기 */}
-            <div style={{ width: 700 }}>
+            <div className="w-[700px] mx-auto my-10 px-20 py-10 bg-sky-200 border-4 border-indigo-500 rounded-xl">
                 {/* 컴포넌트에서 사용하는 프롭 넘김 */}
                 <BarChart chartData={userData} />
+                <span className="font-semibold">Using Tailwind CSS</span>
             </div>
             <div style={{ width: 700 }}>
-              <LineChart chartData={userData} />
+                <LineChart chartData={userData} />
             </div>
             <div style={{ width: 700 }}>
-              <PieChart chartData={userData} />
+                <PieChart chartData={userData} />
+            </div>
+            <div style={{ width: 700 }}>
+                <DoughnutChart chartData={userData} />
             </div>
         </div>
     );
