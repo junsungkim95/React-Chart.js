@@ -4,7 +4,7 @@
 사용하는 차트: Bar, Line, Pie \
 차트 컴포넌트: /src/components/(**차트).js \
 데이터셋: /src/Data.js \
-react-chartjs-2가 작동하기 위해 chart.js/auto를 같이 import해야 함. 각 차트 컴포넌트의 import 부분 확인 \
+react-chartjs-2가 작동하기 위해 chart.js/auto를 같이 import해야 함. 각 차트 컴포넌트의 import 부분 확인
 
 # Getting Started with Create React App
 
